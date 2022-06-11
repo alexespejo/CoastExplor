@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+body {
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #00395c;
+  background-image: url("./background.svg");
+  background-color: rgba(255, 255, 255, 0.7);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-sand {
+  background: rgb(252, 237, 212, 0.8);
+}
+.map-container {
+  width: 15rem;
+  height: 15rem;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
