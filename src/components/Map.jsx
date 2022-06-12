@@ -1,8 +1,9 @@
 import { useMemo } from "react";
+import { maps_api_key } from "../firestore";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 const Map = ({ lati, long }) => {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyA6A1RdnZDqUhXOv4cHnEjQQWWsW5i2Nrw",
+    googleMapsApiKey: maps_api_key,
   });
 
   if (!isLoaded) return <div>loading</div>;

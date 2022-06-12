@@ -20,7 +20,7 @@ function App() {
         style={{ zIndex: "100" }}
       >
         <div className="bg-white text-2xl flex items-center justify-around border-b-4 border-lime-500 w-screen sticky top-0">
-          <span className="text-lg lg:text-4xl ">SoCalxplor🏝</span>
+          <span className="text-lg lg:text-4xl ">CoastExplor🏝</span>
           <ButtonLink tip="Home">
             <BsHouseDoor />
           </ButtonLink>

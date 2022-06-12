@@ -11,9 +11,9 @@ import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 import Switch from "@mui/material/Switch";
 import Stack from "@mui/material/Stack";
-// import { sendMessage } from "../twilio";
+
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firestore";
+import { db, server_ip } from "../firestore";
 import BeachInfo from "../components/BeachInfo";
 import { FaMap, FaHeart } from "react-icons/fa";
 const Planner = () => {
@@ -58,7 +58,7 @@ const Planner = () => {
       <div className="  flex flex-col mx-10 my-5 p-5 bg-white/60 rounded-3xl w-full ">
         <h1 className="text-2xl lg:text-4xl">Plan your next Adventure</h1>
         <form
-          action="http://192.168.1.202:5001/sendsms"
+          action={`${server_ip}sendsms`}
           method="POST"
           enctype="multipart/form-data"
         >
@@ -189,7 +189,11 @@ const Planner = () => {
               onChange={textAreaChange}
             />
           </Stack>
-          <input type="submit" value={"submit"} />
+          <input
+            className="rounded bg-blue-400 text-white px-3 py-1 mt-3 float-right text-xl"
+            type="submit"
+            value={"Share"}
+          />
         </form>
       </div>
       {/* <Button onClick={sendMessage("hello world")}>Send Message</Button> */}

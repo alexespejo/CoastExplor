@@ -9,7 +9,7 @@ const Rating = ({ children, rating }) => {
           : rating === 3
           ? "text-yellow-600"
           : "text-red-600"
-      } flex`}
+      } flex text-lg`}
     >
       {children}
     </div>

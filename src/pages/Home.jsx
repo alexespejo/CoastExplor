@@ -18,7 +18,7 @@ const Home = () => {
     <div className="p-1 overflow-y-scroll">
       <div className="flex flex-wrap justify-center ">
         {beaches.map((beach, i) => {
-          return i === 0 ? (
+          return (
             <BeachInfo
               zip={beach.zip}
               name={beach.label}
@@ -26,9 +26,9 @@ const Home = () => {
               directions={beach.directions}
               coord={beach.coordinates}
               bg_image={true}
+              dating={beach.dating}
+              exploring={beach.exploring}
             />
-          ) : (
-            ""
           );
         })}
       </div>
